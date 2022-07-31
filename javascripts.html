@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8/>
+<title>JS</title>
+</head>
+<body>
+<h1 style="text-align:center";>JavaScript</h1>
+<p><mark><b>Control Structures</mark></b></p>
+<script>
+for(var i=1;i<=100;i++)
+{
+if(i%3 ==0)
+{
+document.write("Talentio"+" " );
+}
+else if(i%5 == 0)
+{
+document.write("Company"+"  " );
+}
+else if (i%3==0 && i%5==0)
+{
+document.write("TalentioCompany" +"  ");
+}
+else
+{
+document.write(i +"  ");
+}
+}
+</script> <br> <br>
+
+<p>
+<b>Topic:Error handling</b>
+<p>
+<script>
+var z=reverseString("Talentio");
+function reverseString(s) {
+    try {
+         s = s.split('').reverse().join('');
+    } catch (e) {
+         document.write('s.split is not a function');
+    }
+
+    document.write(s);
+}
+
+</script><br><br>
+
+<p><b>Topic:Numbers</b></p>
+<script>
+function decimals(a, d)
+{
+if((typeof  a !== 'number') || (typeof  d !== 'number'))
+ return  false;
+ a= parseFloat(a) || 0;
+ return a.toFixed(d);
+}
+document.write(decimals(2.100212,  2)  +" ");
+document.write(decimals(2.100212,  3) +" ");
+document.write(decimals(2100,  2)+" " );
+</script>
+<p><mark><i>Topic:Strings</mark></i></p>
+<script>
+let string_to_array = function  (str)
+{
+    return str.trim().split(" ");
+};
+document.write(string_to_array("Talentio is the best"));
+</script><br><br>
+
+<p><b>Topic:Arrays</b></p>
+<p id="d1"></p>
+<p id="d2"></p>
+<script>
+const arr = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+document.getElementById("d1").innerHTML = arr;
+arr.sort(function(a, b){return  a- b});
+document.getElementById("d2").innerHTML= arr;
+</script>
+</body>
+</html>
